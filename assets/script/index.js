@@ -1,5 +1,7 @@
 'use strict';
 
+import Score from './score.js';
+
 const words = [
     'dinosaur', 'love', 'pineapple', 'calendar', 'robot', 'building',
     'population', 'weather', 'bottle', 'history', 'dream', 'character', 'money',
