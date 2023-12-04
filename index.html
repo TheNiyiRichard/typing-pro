@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adeniyi Richard">
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <title>Fast Typing Game</title>
+    <script src="./assets/script/index.js" type="module"></script>
+    <script src="./assets/script/class.js" defer></script>
+</head>
+<body>
+    <div class="v-main-wrapper">
+        <div class="shapes-layer">
+            <div class="triangle sm shape t-one"></div>
+            <div class="circle sm shape c-one"></div>
+            <div class="triangle sm shape t-two"></div>
+            <div class="circle sm shape c-two"></div>
+            <div class="octagon sm shape"></div>
+            <div class="pentagon sm shape"></div>
+        </div>
+        <div class="bg-layer-image">
+            <img src="./bg-diamonds-overlay.svg" alt="" class="img-fluid" />
+        </div>
+        <div id="game">
+            <h1 id="game-name">FAST TYPER</h1>
+            <br />
+            <div class="v-board-title-container">
+                <span class="board-title">How many letter words can you type in 99 secs ?</span>
+            </div>
+            <br />
+            <button type="button" id="start-button">Start !</button>
+            <div id="word-display"></div>
+            <input type="text" id="word-input" spellcheck="false" placeholder="Start typing..." />
+            <div id="timer">Time left: <span id="time">99</span> seconds</div>
+            <div id="score">Score: <span id="score-value">0</span></div>
+            <audio id="background-music" loop>
+                <source src="./iRobot.mp3" type="audio/mp3" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
