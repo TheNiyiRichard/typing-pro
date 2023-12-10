@@ -125,7 +125,7 @@ const words = [
 	"escape",
 ];
 
-let time = 5;
+let time = 20;
 let score = 0;
 let isPlaying;
 let gameInterval;
@@ -197,7 +197,7 @@ function init() {
 
 function startGame() {
 	isPlaying = true;
-	time = 5;
+	time = 20;
 	score = 0;
 	wordInput.value = "";
 	wordInput.disabled = false;
