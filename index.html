@@ -1,43 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Adeniyi Richard">
-    <link rel="stylesheet" href="./assets/style/index.css" />
-    <title>Fast Typing Game</title>
-    <script src="./assets/script/index.js" type="module"></script>
-</head>
-<body>
-    <div class="v-main-wrapper">
-        <div class="shapes-layer">
-            <div class="triangle sm shape t-one"></div>
-            <div class="circle sm shape c-one"></div>
-            <div class="triangle sm shape t-two"></div>
-            <div class="circle sm shape c-two"></div>
-            <div class="octagon sm shape"></div>
-            <div class="pentagon sm shape"></div>
-        </div>
-        <div class="bg-layer-image">
-            <img src="./bg-diamonds-overlay.svg" alt="" class="img-fluid" />
-        </div>
-        <div id="game">
-            <h1 id="game-name">FAST TYPER</h1>
-            <br />
-            <div class="v-board-title-container">
-                <span class="board-title">How many letter words can you type in 99 secs ?</span>
-            </div>
-            <br />
-            <button type="button" id="start-button">Start !</button>
-            <div id="word-display"></div>
-            <input type="text" id="word-input" spellcheck="false" placeholder="Start typing..." />
-            <div id="timer">Time left: <span id="time">99</span> seconds</div>
-            <div id="score">Score: <span id="score-value">0</span></div>
-            <audio id="background-music" loop>
-                <source src="./iRobot.mp3" type="audio/mp3" />
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Adeniyi Richard" />
+		<link rel="stylesheet" href="./assets/style/index.css" />
+		<title>Fast Typing Game</title>
+		<script src="./assets/script/index.js" type="module"></script>
+	</head>
+	<body>
+		<div class="v-wrap-container">
+			<div class="v-layer">
+				<div class="v-counter-countdown">3</div>
+			</div>
+			<div class="v-wrap-container-inner">
+				<div class="v-main-wrapper">
+					<div id="game">
+						<header class="v-header">
+							<h3>Speed Typer</h3>
+							<span>How fast can you type?</span>
+						</header>
+						<main id="v-main">
+							<div class="v-first">
+								<div class="v-main-timer">
+									<span class="v-icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+											<path
+												fill="currentColor"
+												d="m19.03 7.39l1.42-1.42c-.45-.51-.9-.97-1.41-1.41L17.62 6c-1.55-1.26-3.5-2-5.62-2a9 9 0 0 0 0 18c5 0 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61M13 14h-2V7h2v7m2-13H9v2h6V1Z" />
+										</svg>
+									</span>
+									<span class="v-column"> : </span>
+									<div class="v-timer"><span id="time">5</span>s</div>
+								</div>
+							</div>
+							<div class="v-word-to-type">
+								<h4 class="v-word" id="word-display"></h4>
+							</div>
+							<div class="v-word-input-container">
+								<input type="text" id="word-input" spellcheck="false" placeholder="Start typing..." class="v-form-control" />
+							</div>
+							<div class="v-bottom">
+								<div class="v-hit-counts">Hits : &nbsp;<span class="v-hit" id="score-value">0</span></div>
+								<div class="v-score-count">
+									<button type="button" id="start-button">Start</button>
+								</div>
+							</div>
+						</main>
+					</div>
+					<div>
+						<button type="button" class="v-show-scoreboard">See scoreboard</button>
+					</div>
+				</div>
+				<audio id="background-music" loop hidden="true">
+					<source src="./iRobot.mp3" type="audio/mp3" />
+					Your browser does not support the audio element.
+				</audio>
+				<aside class="v-aside">
+					<div class="v-scoreboard">
+						<header class="v-scoreboard-title">High Scores</header>
+						<ul class="v-score-list"></ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+
+		<div class="modal-layer-container">
+			<div class="modal">
+				<header>
+					<div class="v-grow">
+						<h6>Game Over</h6>
+					</div>
+					<button type="button" class="closemodal">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+								<path
+									fill="currentColor"
+									d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8L4.646 5.354a.5.5 0 0 1 0-.708" />
+							</svg>
+						</span>
+					</button>
+				</header>
+				<div class="modal-body">
+					<div class="v-each">
+						<h6 class="score-hit">
+							<span>Score Hits:</span>
+							<span class="v-value">2</span>
+						</h6>
+					</div>
+					<div class="v-each">
+						<h6 class="accuracy">
+							<span>Accuracy:</span>
+							<span class="v-value">2</span>
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
