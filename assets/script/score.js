@@ -1,6 +1,6 @@
 'use strict';
 
-class Score {
+class score {
     #date;
     #hits;
     #percentage;
