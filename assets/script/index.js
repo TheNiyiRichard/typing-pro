@@ -1,6 +1,6 @@
 "use strict";
 
-import Score from "./Score.js";
+import Score from "./score.js";
 
 const words = [
 	"dinosaur",
